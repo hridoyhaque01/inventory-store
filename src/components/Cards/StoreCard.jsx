@@ -19,7 +19,7 @@ const StoreCard = ({ data }) => {
           />
         </svg>
       </div>
-      <div className="text-whiteHigh">
+      <div className="text-black">
         <p>{data?.title}</p>
         <p className="text-4xl font-bold">{data?.number}</p>
       </div>

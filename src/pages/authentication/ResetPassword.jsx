@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { logo } from "../../assets/getAssets";
+import { logoWhite } from "../../assets/getAssets";
 import RequestLoader from "../../components/loaders/RequestLoader";
 import PasswordInput from "../../components/shared/ui/PasswordInput";
 import { useResetPasswordMutation } from "../../features/auth/authApi";
@@ -99,7 +99,7 @@ function ResetPassword() {
         <div className="w-full max-w-[400px] mx-auto">
           <div className="text-center">
             <div className="text-center lg:text-left mb-6">
-              <img src={logo} alt="" className="w-20 h-20" />
+              <img src={logoWhite} alt="" className="w-1/2 sm:w-full" />
             </div>
             <h2 className="text-2xl text-blackSemi font-bold mt-2">
               Reset Password
