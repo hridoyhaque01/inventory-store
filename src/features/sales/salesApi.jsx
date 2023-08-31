@@ -53,9 +53,8 @@ const salesApi = apiSlice.injectEndpoints({
           console.log(error);
         }
       },
-      invalidatesTags: ["stores"],
+      invalidatesTags: ["stores", "moneyOwes"],
     }),
-
     updateSales: builder.mutation({
       query: ({ data, id }) => ({
         url: `/invoices/update/${id}`,

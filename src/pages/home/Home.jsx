@@ -31,6 +31,11 @@ const Dashboard = () => {
       color: "bg-errorMidColor",
       number: 0,
     },
+    {
+      title: "cards.totalPaidOwner",
+      color: "bg-secondaryMain",
+      number: 0,
+    },
   ]);
 
   const { data, isLoading, isError } = useGetSingleStoreChartDataQuery(
@@ -59,6 +64,7 @@ const Dashboard = () => {
       updatedData[1].number = cardData?.revenue || 0;
       updatedData[2].number = cardData?.due || 0;
       updatedData[3].number = cardData?.products || 0;
+      updatedData[4].number = cardData?.paidToOwner || 0;
       setDashboardData(updatedData);
     }
   }, [isLoading, isError, data]);
@@ -67,7 +73,7 @@ const Dashboard = () => {
     <div className="w-full overflow-auto pt-6 pb-6 px-4 md:px-6">
       <div className="flex flex-col justify-around gap-8 w-full">
         {/* 4 top cards */}
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 xl:gap-6">
           {dashboardData.map((dashboardData, index) => (
             <HomeTopCard data={dashboardData} key={index}></HomeTopCard>
           ))}

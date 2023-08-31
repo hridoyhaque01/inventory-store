@@ -6,6 +6,7 @@ export const owesApi = apiSlice.injectEndpoints({
       query: (id) => ({
         url: `/owes/store/${id}`,
       }),
+      providesTags: ["moneyOwes"],
     }),
     updateOwes: builder.mutation({
       query: ({ data, id, storeId }) => ({

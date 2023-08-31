@@ -14,7 +14,6 @@ import SalesForm from "../pages/forms/SalesForm";
 import SalesFormView from "../pages/forms/SalesFormView";
 import Home from "../pages/home/Home";
 import Inventory from "../pages/inventory/Inventory";
-import Invoice from "../pages/invoice/Invoice";
 import Money from "../pages/money/Money";
 import Profile from "../pages/profile/Profile";
 import PrivateRouter from "./PrivateRouter";
@@ -111,10 +110,7 @@ export const routes = createBrowserRouter([
     path: "/login",
     element: <Login></Login>,
   },
-  {
-    path: "/invoice",
-    element: <Invoice></Invoice>,
-  },
+
   {
     path: "/forget-password",
     element: <ForgetPassword></ForgetPassword>,

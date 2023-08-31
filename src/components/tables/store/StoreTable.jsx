@@ -98,13 +98,15 @@ function StoreTable({ data }) {
           )}
         </table>
       </div>
-      <Pagination
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        rowsPerPage={rowsPerPage}
-        setRowsPerPage={setRowsPerPage}
-        totalRows={data?.length}
-      ></Pagination>
+      <div className="pl-6">
+        <Pagination
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          rowsPerPage={rowsPerPage}
+          setRowsPerPage={setRowsPerPage}
+          totalRows={data?.length}
+        ></Pagination>
+      </div>
     </>
   );
 }

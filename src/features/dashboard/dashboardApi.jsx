@@ -13,6 +13,7 @@ const dashboardApi = apiSlice.injectEndpoints({
         let totalRevenue = 0;
         let totalCustomers = data?.customers?.length;
         let totalProducts = 0;
+        let totalPaidToOwner = 0;
 
         totalProducts = data?.products?.reduce(
           (acc, item) => acc + parseInt(item?.productQuantity),
@@ -180,10 +181,16 @@ const dashboardApi = apiSlice.injectEndpoints({
             0
           );
 
+          const totalPaidToOwner = storeData?.paidToOwner?.reduce(
+            (acc, item) => acc + parseInt(item?.payment),
+            0
+          );
+
           cardData.revenue = storeRevenue;
           cardData.sales = storeSales;
           cardData.products = productQuantity;
           cardData.due = storeDue;
+          cardData.paidToOwner = totalPaidToOwner;
 
           // Calculate revenue for the day
           const dailyRevenue = storeData?.invoices?.reduce(
