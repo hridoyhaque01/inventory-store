@@ -184,7 +184,7 @@ const InvoiceModal = forwardRef(({ data, activeInvoice }, targetRef) => {
                             <th></th>
                             <th
                               scope="row"
-                              className="py-4 pl-3 pr-4 text-sm text-right text-whiteHigh bg-primaryMainDarkest"
+                              className="py-4 pl-3 pr-4 text-sm text-right text-whiteHigh bg-primaryMainDarkest whitespace-nowrap"
                             >
                               Due Amount
                             </th>

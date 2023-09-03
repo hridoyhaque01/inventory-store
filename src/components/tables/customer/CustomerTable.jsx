@@ -49,9 +49,11 @@ function CustomerTable({ data }) {
           </thead>
           {currentRows?.length === 0 ? (
             <tbody>
-              <tr>
-                <td colSpan="6" className="">
-                  {t("noData")}
+              <tr className="border-none">
+                <td colSpan="10" className="py-6">
+                  <h2 className="text-center text-lg text-blackRgb font-medium">
+                    {t("noData")}
+                  </h2>
                 </td>
               </tr>
             </tbody>

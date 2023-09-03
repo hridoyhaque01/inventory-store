@@ -25,9 +25,9 @@ function Customer() {
 
   const filterBySearch = (data) => {
     if (searchValue.trim().length > 0) {
-      return data?.storeName
+      return data?.customerPhone
         ?.toLowerCase()
-        .includes(searchValue?.toLowerCase());
+        .startsWith(searchValue?.toLowerCase());
     } else {
       return true;
     }
