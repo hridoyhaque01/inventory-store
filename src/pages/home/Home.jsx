@@ -44,7 +44,7 @@ const Dashboard = () => {
 
   const { chartData, cardData } = data || {};
 
-  console.log(cardData);
+  console.log(chartData);
 
   let content = null;
   if (isLoading) {

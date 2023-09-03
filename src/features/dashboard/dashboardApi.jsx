@@ -89,10 +89,10 @@ const dashboardApi = apiSlice.injectEndpoints({
 
           const storeDetailsEntry = {
             totalDue: totalDue,
-            revenue: revenue,
+            Revenue: revenue,
             totalCost: totalCost,
             totalSales: totalSales,
-            date: date,
+            Date: date,
             totalPaidToOwner: totalPaidToOwner,
             remaining: remaining,
             storeName: data?.name,
@@ -216,7 +216,7 @@ const dashboardApi = apiSlice.injectEndpoints({
                 paymentDate.getDate() === day &&
                 paymentDate.getMonth() === currentMonth
               ) {
-                totalPaid += parseInt(payment?.payment);
+                totalPaid += payment?.payment ? parseInt(payment?.payment) : 0;
               }
               return totalPaid;
             },
@@ -276,7 +276,7 @@ const dashboardApi = apiSlice.injectEndpoints({
           const formattedDate = `${monthNames[currentMonth]}/${
             day < 10 ? "0" : ""
           }${day}`;
-          dates.push({ day, date: formattedDate });
+          dates.push({ day, Date: formattedDate });
         }
 
         const storeResult = {
@@ -306,10 +306,10 @@ const dashboardApi = apiSlice.injectEndpoints({
 
           for (const storeResult of results) {
             dayData.push({
-              day: day,
-              date: formattedDate,
-              revenue: storeResult?.revenueData[day - 1],
-              sales: storeResult?.salesData[day - 1],
+              Day: day,
+              Date: formattedDate,
+              Revenue: storeResult?.revenueData[day - 1],
+              Sales: storeResult?.salesData[day - 1],
             });
           }
           revenueAndSalesData.push(...dayData);
@@ -326,10 +326,10 @@ const dashboardApi = apiSlice.injectEndpoints({
 
           for (const storeResult of results) {
             dayData.push({
-              day: day,
-              date: formattedDate,
-              due: storeResult?.dueData[day - 1],
-              sales: storeResult?.salesData[day - 1],
+              Day: day,
+              Date: formattedDate,
+              Due: storeResult?.dueData[day - 1],
+              Sales: storeResult?.salesData[day - 1],
             });
           }
           salesAndDueData.push(...dayData);
@@ -346,10 +346,10 @@ const dashboardApi = apiSlice.injectEndpoints({
 
           for (const storeResult of results) {
             dayData.push({
-              day: day,
-              date: formattedDate,
-              recieved: storeResult?.paidToOwnerData[day - 1],
-              sales: storeResult?.salesData[day - 1],
+              Day: day,
+              Date: formattedDate,
+              Recieved: storeResult?.paidToOwnerData[day - 1] || 0,
+              Sales: storeResult?.salesData[day - 1],
             });
           }
           salesAndRecieveData.push(...dayData);
@@ -366,10 +366,10 @@ const dashboardApi = apiSlice.injectEndpoints({
 
           for (const storeResult of results) {
             dayData.push({
-              day: day,
-              date: formattedDate,
-              profit: storeResult?.profitData[day - 1],
-              sales: storeResult?.salesData[day - 1],
+              Day: day,
+              Date: formattedDate,
+              Profit: storeResult?.profitData[day - 1],
+              Sales: storeResult?.salesData[day - 1],
             });
           }
           salesAndProfiteData.push(...dayData);
