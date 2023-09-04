@@ -43,7 +43,7 @@ function Profile() {
                     <img
                       src={store?.fileUrl || avatar}
                       alt=""
-                      className="w-28 h-28 lg:w-40 lg:h-40 rounded-full object-cover bg-cover"
+                      className="w-28 h-28 lg:w-40 lg:h-40 rounded-full object-cover bg-cover border border-blueLight"
                     />
                   </div>
                 </div>
@@ -77,13 +77,13 @@ function Profile() {
                 <div className="flex items-center justify-end gap-3 sm:gap-6">
                   <Link
                     to="/"
-                    className="w-full max-w-[120px] lg:max-w-[160px] p-4 rounded-full font-medium border border-errorLightColor text-errorLightColor text-center text-xs sm:text-base"
+                    className="btn w-full max-w-[160px]  rounded-full font-medium border bg-transparent hover:bg-transparent border-errorLightColor hover:border-errorLightColor text-errorLightColor text-center text-xs sm:text-base"
                   >
                     {t("buttons.cancel")}
                   </Link>
                   <Link
                     to="/edit-store-profile"
-                    className="w-full max-w-max p-4 px-4 sm:px-6 rounded-full bg-primaryMainLight font-medium text-whiteHigh text-center text-xs sm:text-base"
+                    className="btn w-full max-w-max  px-4 sm:px-6 rounded-full bg-primaryMainLight hover:bg-primaryMainLight font-medium text-whiteHigh text-center text-xs sm:text-base"
                   >
                     {t("buttons.editStore")}
                   </Link>

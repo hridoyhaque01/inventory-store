@@ -389,7 +389,7 @@ const dashboardApi = apiSlice.injectEndpoints({
           },
         };
       },
-      providesTags: ["ssdfff"],
+      providesTags: ["dashboard"],
     }),
   }),
 });

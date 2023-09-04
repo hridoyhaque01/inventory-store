@@ -114,6 +114,17 @@ function SalesForm() {
       customerName: selectedCustomer?.customerName,
       dueAmount: dueAmount ? dueAmount?.toString() : "0",
     };
+
+    if (
+      parseInt(quantity) < 0 ||
+      parseInt(selectedProduct?.buyingPrice) < 0 ||
+      parseInt(totalPrice) < 0 ||
+      parseInt(paidAmount) < 0 ||
+      parseInt(dueAmount) < 0
+    ) {
+      errorNotify("Negative values are not accepted");
+      return;
+    }
     const formData = new FormData();
     formData.append("data", JSON.stringify(data));
 

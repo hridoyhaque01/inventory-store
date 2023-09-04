@@ -37,7 +37,7 @@ export const owesApi = apiSlice.injectEndpoints({
           console.log(error);
         }
       },
-      invalidatesTags: ["stores"],
+      invalidatesTags: ["dashboard"],
     }),
   }),
 });

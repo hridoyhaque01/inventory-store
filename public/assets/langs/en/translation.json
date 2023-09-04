@@ -166,6 +166,13 @@
     "suppliers": "suppliers",
     "supplier": "supplier",
     "supplies": "Supplies",
-    "store": "Store"
+    "store": "Store",
+    "storeSetting": "Store Settings",
+    "financial": "Financial Transactions",
+    "transactions": "Transactions",
+    "category": "Category",
+    "editNotAllow": "Editing is not allowed",
+    "addNotAllow": "Adding is not allowed",
+    "close": "Close"
   }
 }

@@ -167,6 +167,13 @@
     "suppliers": "সরবরাহকারী",
     "supplier": "সরবরাহকারী",
     "supplies": "সরবরাহ",
-    "store": "দোকান"
+    "store": "দোকান",
+    "storeSetting": "স্টোর সেটিংস",
+    "financial": "আর্থিক লেনদেন",
+    "transactions": "লেনদেন",
+    "category": "বিভাগ",
+    "editNotAllow": "সংশোধন করার অনুমতি নেই",
+    "addNotAllow": "যোগ করার অনুমতি নেই",
+    "close": "বন্ধ"
   }
 }

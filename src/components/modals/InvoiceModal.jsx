@@ -22,12 +22,12 @@ const InvoiceModal = forwardRef(({ data, activeInvoice }, targetRef) => {
               </svg>
             </label>
           </div>
-          <div className="w-[612px] max-w-[612px] h-[790px] max-h-[790px]">
+          <div className="h-[842px] max-h-[842px] ">
             <div
               ref={targetRef}
-              className="w-[612px] max-w-[612px] h-[790px] max-h-[790px] mx-auto p-8 bg-whiteHigh"
+              className="w-full h-[842px] max-h-[842px]  p-8"
             >
-              <article className="overflow-">
+              <article className="overflow-hidden">
                 <div className="">
                   <div className="flex items-start justify-between">
                     <div className="flex flex-col gap-1">
@@ -207,14 +207,6 @@ const InvoiceModal = forwardRef(({ data, activeInvoice }, targetRef) => {
                 </div>
               </article>
             </div>
-            {/* <div>
-              <button
-                className="btn bg-primaryMainDarkest hover:bg-primaryMainDarkest text-whiteHigh"
-                onClick={downloadPDF}
-              >
-                download PDF
-              </button>
-            </div> */}
           </div>
         </div>
       </div>

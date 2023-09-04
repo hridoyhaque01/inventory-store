@@ -71,7 +71,7 @@ function InventoryTable({ data }) {
               <tr className="border-none">
                 <td colSpan="9" className="py-6">
                   <h2 className="text-center text-lg text-blackRgb font-medium">
-                    No data found!
+                    {t("noData")}
                   </h2>
                 </td>
               </tr>

@@ -53,7 +53,7 @@ const salesApi = apiSlice.injectEndpoints({
           console.log(error);
         }
       },
-      invalidatesTags: ["stores", "moneyOwes"],
+      invalidatesTags: ["dashboard", "moneyOwes"],
     }),
     updateSales: builder.mutation({
       query: ({ data, id }) => ({
@@ -85,6 +85,7 @@ const salesApi = apiSlice.injectEndpoints({
           console.log(error);
         }
       },
+      invalidatesTags: ["dashboard"],
     }),
   }),
 });

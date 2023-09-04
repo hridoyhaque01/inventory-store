@@ -28,18 +28,6 @@ function MoneyOwedForm() {
       theme: "light",
     });
 
-  const infoNotify = (message) =>
-    toast.info(message, {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const dueAmount = event.target.remainingAmount.value;
@@ -50,12 +38,16 @@ function MoneyOwedForm() {
       paidAmount: parseInt(payAmount),
       payDate: dateFormater(payDate),
     };
+
+    if (parseInt(dueAmount) < 0 || parseInt(paidAmount) < 0) {
+      errorNotify("Negative values are not accepted");
+      return;
+    }
     const formData = new FormData();
     formData.append("data", JSON.stringify(data));
     updateOwes({ data: formData, id: payload?._id, storeId: payload?.storeId })
       .unwrap()
       .then((res) => {
-        infoNotify("Update customer owes successfull");
         setPaidAmount(0);
         navigate("/moneyOwed");
       })

@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RequestLoader from "../../components/loaders/RequestLoader";
+import ConfirmationModal from "../../components/modals/ConfirmationModal";
 import { useUpdateAdminMutation } from "../../features/auth/authApi";
 import getCompressedImage from "../../utils/getCompresedImage";
 
@@ -221,16 +222,22 @@ function EditProfile() {
                 <div className="flex items-center justify-end gap-3 mt-4">
                   <Link
                     to="/store-profile"
-                    className="w-full max-w-[160px] p-4 rounded-full font-medium border border-errorLightColor text-errorLightColor text-center text-xs sm:text-base"
+                    className="btn w-full max-w-[160px]  rounded-full font-medium border bg-transparent hover:bg-transparent border-errorLightColor hover:border-errorLightColor text-errorLightColor text-center text-xs sm:text-base"
                   >
                     {t("buttons.cancel")}
                   </Link>
-                  <button
+                  {/* <button
                     type="submit"
                     className="w-full max-w-[160px] p-4 rounded-full bg-primaryMainLight font-medium text-whiteHigh text-center text-xs sm:text-base"
                   >
                     {t("buttons.save")}
-                  </button>
+                  </button> */}
+                  <label
+                    htmlFor="confirmationPopup"
+                    className="btn w-[110px] sm:w-[160px] text-sm sm:text-base  rounded-full border bg-primaryMainLight hover:bg-primaryMainLight text-whiteHigh font-medium text-center whitespace-nowrap"
+                  >
+                    {t("buttons.save")}
+                  </label>
                 </div>
               </div>
             </form>
@@ -251,6 +258,7 @@ function EditProfile() {
           pauseOnHover
           theme="light"
         />
+        <ConfirmationModal status="tableTitle.editNotAllow"></ConfirmationModal>
       </div>
     </section>
   );

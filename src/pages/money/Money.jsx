@@ -28,7 +28,7 @@ function Expenses() {
     if (searchValue.trim().length > 0) {
       return data?.customerId
         ?.toLowerCase()
-        .includes(searchValue?.toLowerCase());
+        .startsWith(searchValue?.toLowerCase());
     } else {
       return true;
     }
